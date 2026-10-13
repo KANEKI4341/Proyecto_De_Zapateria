@@ -134,10 +134,127 @@
                         </select>
                     </div>
                 </form>
+
                 <div class="info_listado">
                     <p id="contador">Mostrando 3 productos</p>
                     <p class="info_listado_orden">Ordenar por: más recientes</p>
                 </div>
+
+
+                <!-- Listado de productos con ejemplos inventados -->
+                <section class="grid" id="listado">
+                
+                    <article class="tarjeta_producto">
+                        <div class="tarjeta_producto_imagen">
+                            <span class="tarjeta_producto_ref">PAS-001</span>
+                            <img src="assets/img/tenis-urban-blanco.jpg" alt="Tenis Urban Blanco con talón verde" loading="lazy">
+                        </div>
+
+                        <div class="tarjeta_producto_body">
+                            <h2 class="tarjeta_producto_titulo">Tenis Urban Blanco</h2>
+                            <p class="tarjeta_producto_desc">Paso · Talla 38 · Blanco / verde</p>
+
+                            <dl class="prices">
+                                <div>
+                                    <dt>Compra</dt>
+                                    <dd class="price-buy">$ 109.900 COP</dd>
+                                </div>
+
+                                <div>
+                                    <dt>Venta</dt>
+                                    <dd class="price-sell">$ 189.900 COP</dd>
+                                </div>
+                            </dl>
+
+                            <div class="stock">
+                                <span>Existencias</span><strong class="stock_value">24 pares</strong>
+                            </div>
+
+                            <div class="card__actions">
+                                <button type="button" class="btn btn_secundario">Editar</button>
+                                <button type="button" class="btn btn_peligro">Eliminar</button>
+                            </div>
+
+                        </div>
+                    </article>
+                
+                    <article class="tarjeta_producto">
+
+                        <div class="tarjeta_producto_imagen">
+                            <span class="tarjeta_producto_ref">PAS-002</span>
+                            <img src="assets/img/mocasin-clasico-cuero.jpg" alt="Mocasín Clásico de cuero color café" loading="lazy">
+                        </div>
+
+                        <div class="tarjeta_producto_body">
+                            <h2 class="tarjeta_producto_titulo">Mocasín Clásico Cuero</h2>
+                            <p class="tarjeta_producto_desc">Andina · Talla 40 · Café</p>
+
+                            <dl class="prices">
+                                <div>
+                                    <dt>Compra</dt>
+                                    <dd class="price-buy">$ 139.900 COP</dd>
+                                </div>
+                                <div>
+                                    <dt>Venta</dt>
+                                    <dd class="price-sell">$ 229.900 COP</dd>
+                                </div>
+                            </dl>
+
+                            <div class="stock">
+                                <span>Existencias</span><strong class="stock_value">8 pares</strong>
+                            </div>
+                            
+                            <div class="card__actions">
+                                <button type="button" class="btn btn_secundario">Editar</button>
+                                <button type="button" class="btn btn_peligro">Eliminar</button>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="tarjeta_producto">
+                        <div class="tarjeta_producto_imagen">
+                            <span class="tarjeta_producto_ref">PAS-003</span>
+                            <img src="assets/img/sandalia-arena.jpg" alt="Sandalia Arena color beige" loading="lazy">
+                        </div>
+
+                        <div class="tarjeta_producto_body">
+                            <h2 class="tarjeta_producto_titulo">Sandalia Arena</h2>
+                            <p class="tarjeta_producto_desc">Solé · Talla 37 · Beige</p>
+
+                            <dl class="prices">
+                                <div>
+                                    <dt>Compra</dt>
+                                    <dd class="price-buy">$ 69.900 COP</dd>
+                                </div>
+                                <div>
+                                    <dt>Venta</dt>
+                                    <dd class="price-sell">$ 119.900 COP</dd>
+                                </div>
+                            </dl>
+
+                            <div class="stock">
+                                <span>Existencias</span><strong class="stock_value">3 pares · Stock bajo</strong>
+                            </div>
+
+                            <div class="card__actions">
+                                <button type="button" class="btn btn_secundario">Editar</button>
+                                <button type="button" class="btn btn_peligro">Eliminar</button>
+                            </div>
+                        </div>
+                    </article>
+                
+                </section>
+                <p class="empty" id="vacio" hidden>No hay productos que coincidan con tu búsqueda.</p>
+                
+                <footer class="paginas">
+                    <p id="paginacion">1–3 de 3 productos · Página 1 de 1</p>
+                    <div class="paginacion_btns">
+                        <button type="button" class="btn btn_secundario btn--sm">Anterior</button>
+                        <button type="button" class="btn btn_secundario btn--sm">Siguiente</button>
+                    </div>
+                </footer>
+
+
 
             </main>
             

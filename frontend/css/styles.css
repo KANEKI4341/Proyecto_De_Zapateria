@@ -45,6 +45,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .app {
     display: grid;
     grid-template-columns: 200px 1fr; /*1fr hace que la segunda columna ocupe todo el espacio disponible*/
@@ -366,4 +371,138 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 4px;
+}
+
+/* Listado de productos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta_producto {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta_producto_imagen {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #d9d4cc;
+}
+
+.tarjeta_producto_imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* hace que la imagen se ajuste al contenedor sin deformarse */
+}
+
+.tarjeta_producto_ref {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    padding: 3px 9px;
+    border-radius: 6px;
+    background: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.tarjeta_producto_body {
+    padding: 14px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta_producto_titulo {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.tarjeta_producto_desc {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.prices dt {
+    font-size: 11.5px;
+    color: var(--muted);
+}
+
+.prices dd {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.prices .price-sell {
+    color: var(--green-700);
+    font-weight: 700;
+}
+
+.stock {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.stock_value {
+    color: var(--green-700);
+    font-weight: 700;
+}
+
+.card__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.card__actions .btn {
+    height: 38px;
+}
+
+.empty {
+    padding: 40px 16px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--white);
+    border-radius: var(--radius);
+}
+
+.paginas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.paginacion_btns {
+    display: flex;
+    gap: 8px;
 }
