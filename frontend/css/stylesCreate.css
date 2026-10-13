@@ -1,0 +1,34 @@
+:root {
+  --green-900: #12302a;
+  --green-700: #17724a;
+  --green-600: #1a7a50;
+  --green-100: #e3f1ea;
+  --green-50: #eef6f1;
+  --red-600: #c62828;
+  --red-100: #fdeaea;
+  --texto: #1f2a27;
+  --muted: #6b7773;
+  --line: #e3e7e5;
+  --fondo: #f1f3f2;
+  --white: #fff;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgba(18, 48, 42, .04);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* muchas fuentes para que no haya problemas de compatibilidad */
+}
+
+/* ---------- Vista Crear / Editar producto ---------- */
+
+.back_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: var(--green-700);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.back_link:hover {
+    text-decoration: underline;
+}
