@@ -177,7 +177,7 @@ a {
 .topbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* hace que el título y el botón estén en extremos opuestos */
     gap: 16px;
     height: 66px;
     padding: 0 32px;
@@ -234,4 +234,67 @@ a {
     color: var(--green-700);
     font-size: 12px;
     font-weight: 700;
+}
+
+.content {
+    padding: 28px 26px 32px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.page_head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* hace que el título y el botón estén en extremos opuestos */
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.page_head h1 {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.5px;
+    color: var(--green-900);
+}
+
+.page_head_sub {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Zona del resumen */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* hace que haya 3 columnas de igual tamaño */
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.stat_icon {
+    /*falta añadir la imagen del icono*/
+}
+
+.stat_label {
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.stat_value {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text);
 }
