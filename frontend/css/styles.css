@@ -1,0 +1,170 @@
+/* variables para reutilizar en todo el proyecto */
+:root {
+  --green-900: #12302a;
+  --green-700: #17724a;
+  --green-600: #1a7a50;
+  --green-100: #e3f1ea;
+  --green-50: #eef6f1;
+  --red-600: #c62828;
+  --red-100: #fdeaea;
+  --texto: #1f2a27;
+  --muted: #6b7773;
+  --line: #e3e7e5;
+  --fondo: #f1f3f2;
+  --white: #fff;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgba(18, 48, 42, .04);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* muchas fuentes para que no haya problemas de compatibilidad */
+}
+
+*,*::before,*::after {
+    box-sizing: border-box; /* hace que el relleno y los bordes se incluyan en el ancho y alto de los elementos */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+h1,h2,p,dl,dd,ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 200px 1fr; /*1fr hace que la segunda columna ocupe todo el espacio disponible*/
+    min-height: 100vh; /* hace que la app ocupe toda la altura de la pantalla */
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: sticky; /* hace que el sidebar se quede fijo en la pantalla al hacer scroll */
+    top: 0;
+    height: 100vh;
+    display: flex; /* hace que los elementos hijos se alineen en una fila */
+    flex-direction: column;
+    padding: 24px 16px 20px;
+    background: var(--white);
+    border-right: 1px solid var(--line);
+}
+
+.sidebar_top {
+    margin-bottom: 26px;
+}
+
+.marca {
+    line-height: 1;
+}
+
+.nombre_marca {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--green-700);
+}
+
+.tag_marca {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: var(--green-900);
+}
+
+.sidebar_label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.nav {
+    gap: 6px;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 15px;
+    transition: background .15s, color .15s;
+}
+
+.nav_link:hover {
+    background: var(--fondo);
+    color: var(--text);
+}
+
+.nav_link.is-active {
+    background: var(--green-100);
+    color: var(--green-700);
+    font-weight: 600;
+}
+
+.tip {
+    margin-top: 28px;
+    padding: 16px;
+    border-radius: var(--radius);
+    background: var(--green-100);
+}
+
+.tip_titulo {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.tip_texto {
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.sidebar_bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.help_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    padding: 0 4px;
+}
+
+.help_link:hover {
+    color: var(--texto);
+}
+
+.sidebar_foot {
+    font-size: 11px;
+    color: var(--muted);
+    padding: 0 4px;
+}
+
+
