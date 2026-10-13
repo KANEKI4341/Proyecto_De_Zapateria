@@ -66,7 +66,7 @@
 
                 <a href="index.html" class="back_link">&lt;-- Volver a productos</a>
 
-                <div class="page_head">
+                <div class="page_head page_head_simple">
                     <div>
                         <h1>Crear producto</h1>
                         <p class="page_head_sub">Añade un nuevo par a tu inventario.</p>
@@ -167,12 +167,12 @@
                         <h2 id="foto_titulo">Fotografía del producto</h2>
                         <p class="photo_panel_sub">Una buena foto hace toda la diferencia.</p>
                 
-                        <div class="preview" id="preview" hidden>
+                        <div class="preview" id="preview">
                             <img id="preview_img" alt="">
-                            <span class="preview_badge" id="badge" hidden>Cargando · 0 %</span>
+                            <span class="preview_badge" id="badge">Cargando · 0 %</span>
                         </div>
                 
-                        <div class="file_row" id="file_row" hidden>
+                        <div class="file_row" id="file_row">
                             <span class="file_row_name" id="file_name"></span>
                             <span class="file_row_actions">
                                 <button type="button" class="link_btn link_btn_green" id="btn_cambiar">Cambiar</button>
@@ -180,7 +180,7 @@
                             </span>
                         </div>
                 
-                        <div class="progress" id="progress" hidden>
+                        <div class="progress" id="progress">
                             <div class="progress_bar" id="progress_bar"></div>
                         </div>
                 
@@ -188,14 +188,14 @@
                             <strong>Subir fotografía</strong>
                             <span>Seleccionar archivos del computador</span>
                             <small>JPG, PNG o WEBP · Máximo 5 MB</small>
-                            <input type="file" id="foto" name="foto" class="sr-only" accept="image/jpeg,image/png,image/webp">
+                            <input type="file" id="foto" name="foto" class="sr-only" accept="image/jpeg,image/png,image/webp" hidden>
                         </label>
                 
-                        <p class="notice notice_error" id="foto_error" hidden>
-                            <span id="foto_error_texto"></span>
+                        <p class="notice notice_error" id="foto_error">
+                            <span id="foto_error_texto">Error: La imagen no cumple con los requisitos.</span>
                         </p>
                 
-                        <p class="notice" id="foto_ok" hidden>
+                        <p class="notice" id="foto_ok">
                             <span>Fotografía seleccionada. Usa un fondo neutro y muestra el calzado completo.</span>
                         </p>
                     </aside>
