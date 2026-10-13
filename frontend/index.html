@@ -96,6 +96,49 @@
                     </article>
                 </section>
 
+
+                <!-- Filtros -->
+                <form class="filters" id="filtros" onsubmit="return false">
+                    <div class="search">
+                        <label for="buscar"></label>
+                        <input type="search" id="buscar" placeholder="Buscar por nombre, referencia o marca" autocomplete="off">
+                    </div>
+                
+                    <div class="select">
+                        <label for="f-categoria"></label>
+                        <select id="f-categoria">
+                            <option value="">Categoría</option>
+                            <option value="Tenis">Tenis</option>
+                            <option value="Mocasines">Mocasines</option>
+                            <option value="Sandalias">Sandalias</option>
+                            <option value="Botas">Botas</option>
+                        </select>
+                    </div>
+                
+                    <div class="select">
+                        <label for="f-marca"></label>
+                        <select id="f-marca">
+                            <option value="">Marca</option>
+                            <option value="Paso">Paso</option>
+                            <option value="Andina">Andina</option>
+                            <option value="Solé">Solé</option>
+                        </select>
+                    </div>
+                
+                    <div class="select">
+                        <label for="f-existencias"></label>
+                        <select id="f-existencias">
+                            <option value="">Existencias</option>
+                            <option value="disponible">Disponible</option>
+                            <option value="bajo">Stock bajo</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="info_listado">
+                    <p id="contador">Mostrando 3 productos</p>
+                    <p class="info_listado_orden">Ordenar por: más recientes</p>
+                </div>
+
             </main>
             
         </div>
