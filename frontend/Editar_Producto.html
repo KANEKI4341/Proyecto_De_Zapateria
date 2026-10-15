@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Productos Paso Zapatería</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesCreate.css">
+</head>
+    
+<body>
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar_top">
+                <a href="index.html" class="marca">
+                    <span class="nombre_marca">paso.</span>
+                    <br> <!-- espaciado entre la marca y el tipo de negocio -->
+                    <span class="tag_marca">Zapatería</span>
+                </a>
+            </div>
+
+            <p class="sidebar_label">Mi negocio</p>
+
+            <nav>
+                <ul class="nav">
+                    <li><a class="nav_link is-active" href="index.html">Productos</a></li>
+                </ul>
+            </nav>
+
+            <div class="tip">
+                <p class="tip_titulo">Cada paso, en orden.</p>
+                <p class="tip_texto">Mantén tus productos al día y tu negocio en movimiento.</p>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="#" class="help_link">Centro de ayuda</a>
+                <p class="sidebar_foot">Paso · Tu negocio, un paso adelante.</p>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+
+        <div class="main">
+            <header class="topbar">
+                <nav class="breadcrumb">
+                    <a href="#">Mi negocio</a>
+                    <span>/</span>
+                    <span aria-current="page">Productos</span>
+                </nav>
+
+                <div class="topbar_right">
+                    <!-- imagen de boton de notificacion -->
+                    <div class="user">
+                        <div class="user_info">
+                            <strong>María Torres</strong>
+                            <span>Administradora · Bogotá</span>
+                        </div>
+                        <span class="avatar">MT</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content" id="contenido">
+
+                <a href="index.html" class="back_link">&lt;-- Volver a productos</a>
+
+                <div class="page_head page_head_simple">
+                    <div>
+                        <h1>Editar Producto</h1>
+                        <p class="page_head_sub">Añade un nuevo par a tu inventario.</p>
+                    </div>
+                </div>
+
+                <form class="form_card" id="form_producto" novalidate>
+                
+                    <section class="form_main">
+
+                        <div class="form_section_head">
+                            <h2 id="info_titulo">Información del producto</h2>
+                            <p class="req_note">* Campos obligatorios</p>
+                        </div>
+                
+                        <div class="form_grid form_grid_page">
+                            <div class="campo">
+                                <label for="p_ref">Referencia *</label>
+                                <input type="text" id="p_ref" name="ref" placeholder="PAS-004" autocomplete="off">
+                                <p class="campo_error" id="err_ref"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_nombre">Nombre *</label>
+                                <input type="text" id="p_nombre" name="nombre" placeholder="Ej: Bota Casual Negra" autocomplete="off">
+                                <p class="campo_error" id="err_nombre"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_descripcion">Descripción *</label>
+                                <input type="text" id="p_descripcion" name="descripcion" placeholder="Ej: Tenis cómodo de uso diario."
+                                    autocomplete="off">
+                                <p class="campo_error" id="err_descripcion"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_categoria">Categoría *</label>
+                                <select id="p_categoria" name="categoria">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="Tenis">Tenis</option>
+                                    <option value="Mocasines">Mocasines</option>
+                                    <option value="Sandalias">Sandalias</option>
+                                    <option value="Botas">Botas</option>
+                                </select>
+                                <p class="campo_error" id="err_categoria"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_marca">Marca *</label>
+                                <select id="p_marca" name="marca">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="Paso">Paso</option>
+                                    <option value="Andina">Andina</option>
+                                    <option value="Solé">Solé</option>
+                                </select>
+                                <p class="campo_error" id="err_marca"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_talla">Talla *</label>
+                                <input type="number" id="p_talla" name="talla" placeholder="35 a 45" autocomplete="off"
+                                 inputmode="numeric" min="35" max="45">
+                                <p class="campo_error" id="err_talla"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_color">Color *</label>
+                                <input type="text" id="p_color" name="color" placeholder="Ej: Blanco / verde" autocomplete="off">
+                                <p class="campo_error" id="err_color"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_cantidad">Cantidad *</label>
+                                <input type="number" id="p_cantidad" name="cantidad" placeholder="0" autocomplete="off" 
+                                inputmode="numeric" min="0">
+                                <p class="campo_error" id="err_cantidad"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_compra">Precio de compra *</label>
+                                <input type="text" id="p_compra" name="compra" placeholder="$ 109.900 COP" autocomplete="off"
+                                inputmode="numeric">
+                                <p class="campo_error" id="err_compra"></p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="p_venta">Precio de venta *</label>
+                                <input type="text" id="p_venta" name="venta" placeholder="$ 189.900 COP" autocomplete="off"
+                                 inputmode="numeric">
+                                <p class="campo_error" id="err_venta"></p>
+                            </div>
+                        </div>
+                
+                        <p class="form_hint">Precios en pesos colombianos (COP). La cantidad corresponde a pares disponibles.</p>
+                    </section>
+                
+                    <aside class="photo_panel">
+                        <h2 id="foto_titulo">Fotografía del producto</h2>
+                        <p class="photo_panel_sub">Una buena foto hace toda la diferencia.</p>
+                
+                        <div class="preview" id="preview">
+                            <img id="preview_img" alt="">
+                            <span class="preview_badge" id="badge">Cargando · 0 %</span>
+                        </div>
+                
+                        <div class="file_row" id="file_row">
+                            <span class="file_row_name" id="file_name"></span>
+                            <span class="file_row_actions">
+                                <button type="button" class="link_btn link_btn_green" id="btn_cambiar">Cambiar</button>
+                                <button type="button" class="link_btn link_btn_red" id="btn_quitar">Eliminar</button>
+                            </span>
+                        </div>
+                
+                        <div class="progress" id="progress">
+                            <div class="progress_bar" id="progress_bar"></div>
+                        </div>
+                
+                        <label class="dropzone" id="dropzone" for="foto">
+                            <strong>Subir fotografía</strong>
+                            <span>Seleccionar archivos del computador</span>
+                            <small>JPG, PNG o WEBP · Máximo 5 MB</small>
+                            <input type="file" id="foto" name="foto" class="sr-only" accept="image/jpeg,image/png,image/webp" hidden>
+                        </label>
+                
+                        <p class="notice notice_error" id="foto_error">
+                            <span id="foto_error_texto">Error: La imagen no cumple con los requisitos.</span>
+                        </p>
+                
+                        <p class="notice" id="foto_ok">
+                            <span>Fotografía seleccionada. Usa un fondo neutro y muestra el calzado completo.</span>
+                        </p>
+                    </aside>
+                
+                    <div class="form_foot">
+                        <p id="estado">Los cambios se guardarán al confirmar.</p>
+                        <div class="form_foot_btns">
+                            <a href="index.html" class="btn btn_secundario">Cancelar</a>
+                            <button type="submit" class="btn btn_primary" id="btn_guardar">Crear producto</button>
+                        </div>
+                    </div>
+                </form>
+
+            </main>
+        </div>
+    </div>
+</body>
+    
