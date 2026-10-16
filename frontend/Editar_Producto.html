@@ -85,19 +85,19 @@
                         <div class="form_grid form_grid_page">
                             <div class="campo">
                                 <label for="p_ref">Referencia *</label>
-                                <input type="text" id="p_ref" name="ref" placeholder="PAS-004" autocomplete="off">
+                                <input type="text" id="p_ref" name="ref" value="PAS-004" autocomplete="off">
                                 <p class="campo_error" id="err_ref"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_nombre">Nombre *</label>
-                                <input type="text" id="p_nombre" name="nombre" placeholder="Ej: Bota Casual Negra" autocomplete="off">
+                                <input type="text" id="p_nombre" name="nombre" value="Bota Casual Negra" autocomplete="off">
                                 <p class="campo_error" id="err_nombre"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_descripcion">Descripción *</label>
-                                <input type="text" id="p_descripcion" name="descripcion" placeholder="Ej: Tenis cómodo de uso diario."
+                                <input type="text" id="p_descripcion" name="descripcion" value="Tenis cómodo de uso diario."
                                     autocomplete="off">
                                 <p class="campo_error" id="err_descripcion"></p>
                             </div>
@@ -106,7 +106,7 @@
                                 <label for="p_categoria">Categoría *</label>
                                 <select id="p_categoria" name="categoria">
                                     <option value="">Selecciona una opción</option>
-                                    <option value="Tenis">Tenis</option>
+                                    <option value="Tenis" selected>Tenis</option>
                                     <option value="Mocasines">Mocasines</option>
                                     <option value="Sandalias">Sandalias</option>
                                     <option value="Botas">Botas</option>
@@ -118,7 +118,7 @@
                                 <label for="p_marca">Marca *</label>
                                 <select id="p_marca" name="marca">
                                     <option value="">Selecciona una opción</option>
-                                    <option value="Paso">Paso</option>
+                                    <option value="Paso" selected>Paso</option>
                                     <option value="Andina">Andina</option>
                                     <option value="Solé">Solé</option>
                                 </select>
@@ -127,34 +127,34 @@
 
                             <div class="campo">
                                 <label for="p_talla">Talla *</label>
-                                <input type="number" id="p_talla" name="talla" placeholder="35 a 45" autocomplete="off"
+                                <input type="number" id="p_talla" name="talla" value="35" placeholder="35 a 45" autocomplete="off"
                                  inputmode="numeric" min="35" max="45">
                                 <p class="campo_error" id="err_talla"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_color">Color *</label>
-                                <input type="text" id="p_color" name="color" placeholder="Ej: Blanco / verde" autocomplete="off">
+                                <input type="text" id="p_color" name="color" value="Blanco / verde" autocomplete="off">
                                 <p class="campo_error" id="err_color"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_cantidad">Cantidad *</label>
-                                <input type="number" id="p_cantidad" name="cantidad" placeholder="0" autocomplete="off" 
+                                <input type="number" id="p_cantidad" name="cantidad" value="0" placeholder="1" autocomplete="off" 
                                 inputmode="numeric" min="0">
                                 <p class="campo_error" id="err_cantidad"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_compra">Precio de compra *</label>
-                                <input type="text" id="p_compra" name="compra" placeholder="$ 109.900 COP" autocomplete="off"
+                                <input type="text" id="p_compra" name="compra" value="$ 109.900 COP" autocomplete="off"
                                 inputmode="numeric">
                                 <p class="campo_error" id="err_compra"></p>
                             </div>
 
                             <div class="campo">
                                 <label for="p_venta">Precio de venta *</label>
-                                <input type="text" id="p_venta" name="venta" placeholder="$ 189.900 COP" autocomplete="off"
+                                <input type="text" id="p_venta" name="venta" value="$ 189.900 COP" autocomplete="off"
                                  inputmode="numeric">
                                 <p class="campo_error" id="err_venta"></p>
                             </div>
@@ -169,7 +169,7 @@
                 
                         <div class="preview" id="preview">
                             <img id="preview_img" alt="">
-                            <span class="preview_badge" id="badge">Cargando · 0 %</span>
+                            <span class="preview_badge" id="badge">✓ Fotografia Actual</span>
                         </div>
                 
                         <div class="file_row" id="file_row">
@@ -204,7 +204,7 @@
                         <p id="estado">Los cambios se guardarán al confirmar.</p>
                         <div class="form_foot_btns">
                             <a href="index.html" class="btn btn_secundario">Cancelar</a>
-                            <button type="submit" class="btn btn_primary" id="btn_guardar">Crear producto</button>
+                            <button type="submit" class="btn btn_primary" id="btn_guardar">Editar producto</button>
                         </div>
                     </div>
                 </form>

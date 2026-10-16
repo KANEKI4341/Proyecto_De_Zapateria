@@ -120,7 +120,7 @@ img {
 
 .nav_link:hover {
     background: var(--fondo);
-    color: var(--text);
+    color: var(--texto);
 }
 
 .nav_link.is-active {
@@ -301,7 +301,7 @@ img {
     font-size: 22px;
     font-weight: 500;
     line-height: 1.2;
-    color: var(--text);
+    color: var(--texto);
 }
 
 /* Filtros */
@@ -505,4 +505,56 @@ img {
 .paginacion_btns {
     display: flex;
     gap: 8px;
+}
+
+/* BOTONES */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background .15s, border-color .15s, box-shadow .15s;
+}
+
+.btn--sm {
+    height: 36px;
+    padding: 0 16px;
+}
+
+.btn_primary {
+    height: 42px;
+    background: var(--green-700);
+    color: #fff;
+    padding: 0 22px;
+}
+
+.btn_primary:hover {
+    background: #135f3d;
+}
+
+.btn_secundario {
+    background: var(--white);
+    border-color: var(--line);
+    color: var(--texto);
+}
+
+.btn_secundario:hover {
+    border-color: #c9d0cd;
+    background: #fafbfa;
+}
+
+.btn_peligro {
+    background: transparent;
+    color: var(--red-600);
+}
+
+.btn_peligro:hover {
+    background: var(--red-100);
 }
