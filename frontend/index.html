@@ -15,7 +15,7 @@
             <div class="sidebar_top">
                 <a href="index.html" class="marca">
                     <span class="nombre_marca">paso.</span>
-                    <br> <!-- espaciado entre la marca y el tipo de negocio -->
+                    <br>
                     <span class="tag_marca">Zapatería</span>
                 </a>
             </div>
@@ -40,7 +40,6 @@
         </aside>
 
         <!-- Contenido principal -->
-
         <div class="main">
             <header class="topbar">
                 <nav class="breadcrumb">
@@ -50,7 +49,6 @@
                 </nav>
 
                 <div class="topbar_right">
-                    <!-- imagen de boton de notificacion -->
                     <div class="user">
                         <div class="user_info">
                             <strong>María Torres</strong>
@@ -67,46 +65,49 @@
                         <h1>Productos</h1>
                         <p class="page_head_sub">Tu inventario, siempre un paso adelante.</p>
                     </div>
-                    <button type="button" class="btn btn_primary" id="btn_crear">Crear producto
-                    </button>
+                    <a href="crear.html" class="btn btn_primary" id="btn_crear">Crear producto</a>
                 </div>
-                
+
                 <!-- Resumen -->
                 <section class="stats">
                     <article class="stat">
-                        <!-- falta añadir icono de productos activos -->
+                        <span class="stat_icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+                        </span>
                         <div>
                             <p class="stat_label">Productos activos</p>
-                            <p class="stat_value" id="stat_productos">3</p>
+                            <p class="stat_value" id="stat_productos">0</p>
                         </div>
                     </article>
                     <article class="stat">
-                        <!-- falta añadir icono de pares disponibles -->
+                        <span class="stat_icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+                        </span>
                         <div>
                             <p class="stat_label">Pares disponibles</p>
-                            <p class="stat_value" id="stat_pares">35</p>
+                            <p class="stat_value" id="stat_pares">0</p>
                         </div>
                     </article>
                     <article class="stat">
-                        <!-- falta añadir icono de stock bajo -->
+                        <span class="stat_icon stat_icon_alerta">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v5M12 18h.01"/></svg>
+                        </span>
                         <div>
                             <p class="stat_label">Stock bajo</p>
-                            <p class="stat_value" id="stat_bajo">1 producto</p>
+                            <p class="stat_value" id="stat_bajo">0 productos</p>
                         </div>
                     </article>
                 </section>
 
-
                 <!-- Filtros -->
                 <form class="filters" id="filtros" onsubmit="return false">
                     <div class="search">
-                        <label for="buscar"></label>
-                        <input type="search" id="buscar" placeholder="Buscar por nombre, referencia o marca" autocomplete="off">
+                        <svg class="search_icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+                        <input type="search" id="buscar" aria-label="Buscar productos" placeholder="Buscar por nombre, referencia o marca" autocomplete="off">
                     </div>
-                
+
                     <div class="select">
-                        <label for="f-categoria"></label>
-                        <select id="f-categoria">
+                        <select id="f-categoria" aria-label="Filtrar por categoría">
                             <option value="">Categoría</option>
                             <option value="Tenis">Tenis</option>
                             <option value="Mocasines">Mocasines</option>
@@ -114,20 +115,18 @@
                             <option value="Botas">Botas</option>
                         </select>
                     </div>
-                
+
                     <div class="select">
-                        <label for="f-marca"></label>
-                        <select id="f-marca">
+                        <select id="f-marca" aria-label="Filtrar por marca">
                             <option value="">Marca</option>
                             <option value="Paso">Paso</option>
                             <option value="Andina">Andina</option>
                             <option value="Solé">Solé</option>
                         </select>
                     </div>
-                
+
                     <div class="select">
-                        <label for="f-existencias"></label>
-                        <select id="f-existencias">
+                        <select id="f-existencias" aria-label="Filtrar por existencias">
                             <option value="">Existencias</option>
                             <option value="disponible">Disponible</option>
                             <option value="bajo">Stock bajo</option>
@@ -136,124 +135,41 @@
                 </form>
 
                 <div class="info_listado">
-                    <p id="contador">Mostrando 3 productos</p>
+                    <p id="contador">Mostrando 0 productos</p>
                     <p class="info_listado_orden">Ordenar por: más recientes</p>
                 </div>
 
-
-                <!-- Listado de productos con ejemplos inventados -->
-                <section class="grid" id="listado">
-                
-                    <article class="tarjeta_producto">
-                        <div class="tarjeta_producto_imagen">
-                            <span class="tarjeta_producto_ref">PAS-001</span>
-                            <img src="assets/img/tenis-urban-blanco.jpg" alt="Tenis Urban Blanco con talón verde" loading="lazy">
-                        </div>
-
-                        <div class="tarjeta_producto_body">
-                            <h2 class="tarjeta_producto_titulo">Tenis Urban Blanco</h2>
-                            <p class="tarjeta_producto_desc">Paso · Talla 38 · Blanco / verde</p>
-
-                            <dl class="prices">
-                                <div>
-                                    <dt>Compra</dt>
-                                    <dd class="price-buy">$ 109.900 COP</dd>
-                                </div>
-
-                                <div>
-                                    <dt>Venta</dt>
-                                    <dd class="price-sell">$ 189.900 COP</dd>
-                                </div>
-                            </dl>
-
-                            <div class="stock">
-                                <span>Existencias</span><strong class="stock_value">24 pares</strong>
-                            </div>
-
-                            <div class="card__actions">
-                                <button type="button" class="btn btn_secundario">Editar</button>
-                                <button type="button" class="btn btn_peligro">Eliminar</button>
-                            </div>
-
-                        </div>
-                    </article>
-                
-                    <article class="tarjeta_producto">
-
-                        <div class="tarjeta_producto_imagen">
-                            <span class="tarjeta_producto_ref">PAS-002</span>
-                            <img src="assets/img/mocasin-clasico-cuero.jpg" alt="Mocasín Clásico de cuero color café" loading="lazy">
-                        </div>
-
-                        <div class="tarjeta_producto_body">
-                            <h2 class="tarjeta_producto_titulo">Mocasín Clásico Cuero</h2>
-                            <p class="tarjeta_producto_desc">Andina · Talla 40 · Café</p>
-
-                            <dl class="prices">
-                                <div>
-                                    <dt>Compra</dt>
-                                    <dd class="price-buy">$ 139.900 COP</dd>
-                                </div>
-                                <div>
-                                    <dt>Venta</dt>
-                                    <dd class="price-sell">$ 229.900 COP</dd>
-                                </div>
-                            </dl>
-
-                            <div class="stock">
-                                <span>Existencias</span><strong class="stock_value">8 pares</strong>
-                            </div>
-                            
-                            <div class="card__actions">
-                                <button type="button" class="btn btn_secundario">Editar</button>
-                                <button type="button" class="btn btn_peligro">Eliminar</button>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="tarjeta_producto">
-                        <div class="tarjeta_producto_imagen">
-                            <span class="tarjeta_producto_ref">PAS-003</span>
-                            <img src="assets/img/sandalia-arena.jpg" alt="Sandalia Arena color beige" loading="lazy">
-                        </div>
-
-                        <div class="tarjeta_producto_body">
-                            <h2 class="tarjeta_producto_titulo">Sandalia Arena</h2>
-                            <p class="tarjeta_producto_desc">Solé · Talla 37 · Beige</p>
-
-                            <dl class="prices">
-                                <div>
-                                    <dt>Compra</dt>
-                                    <dd class="price-buy">$ 69.900 COP</dd>
-                                </div>
-                                <div>
-                                    <dt>Venta</dt>
-                                    <dd class="price-sell">$ 119.900 COP</dd>
-                                </div>
-                            </dl>
-
-                            <div class="stock">
-                                <span>Existencias</span><strong class="stock_value">3 pares · Stock bajo</strong>
-                            </div>
-
-                            <div class="card__actions">
-                                <button type="button" class="btn btn_secundario">Editar</button>
-                                <button type="button" class="btn btn_peligro">Eliminar</button>
-                            </div>
-                        </div>
-                    </article>
-                
-                </section>
+                <!-- Listado (lo llena js/index.js) -->
+                <section class="grid" id="listado"></section>
                 <p class="empty" id="vacio" hidden>No hay productos que coincidan con tu búsqueda.</p>
-                
+
                 <footer class="paginas">
-                    <p id="paginacion">1–3 de 3 productos · Página 1 de 1</p>
+                    <p id="paginacion"></p>
                     <div class="paginacion_btns">
-                        <button type="button" class="btn btn_secundario btn--sm">Anterior</button>
-                        <button type="button" class="btn btn_secundario btn--sm">Siguiente</button>
+                        <button type="button" class="btn btn_secundario btn--sm" id="btn_anterior">Anterior</button>
+                        <button type="button" class="btn btn_secundario btn--sm" id="btn_siguiente">Siguiente</button>
                     </div>
                 </footer>
             </main>
         </div>
     </div>
+
+    <!-- Ventana para confirmar eliminación -->
+    <div class="modal" id="modal" hidden>
+        <div class="modal_caja" role="dialog" aria-modal="true" aria-labelledby="modal_titulo">
+            <p class="modal_aviso">Acción irreversible</p>
+            <h2 id="modal_titulo">¿Eliminar producto?</h2>
+            <p id="modal_texto"></p>
+            <p class="modal_nota">Esta acción no se puede deshacer. No podrás recuperar la información.</p>
+            <div class="modal_btns">
+                <button type="button" class="btn btn_secundario" id="modal_cancelar">Cancelar</button>
+                <button type="button" class="btn btn_peligro_solido" id="modal_eliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datos.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
+</html>

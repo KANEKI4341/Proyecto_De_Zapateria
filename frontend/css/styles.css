@@ -15,11 +15,16 @@
   --radius: 14px;
   --radius-sm: 10px;
   --shadow: 0 1px 2px rgba(18, 48, 42, .04);
-  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* muchas fuentes para que no haya problemas de compatibilidad */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 *,*::before,*::after {
-    box-sizing: border-box; /* hace que el relleno y los bordes se incluyan en el ancho y alto de los elementos */
+    box-sizing: border-box;
+}
+
+/* hace que el atributo hidden siempre oculte el elemento */
+[hidden] {
+    display: none !important;
 }
 
 body {
@@ -52,17 +57,17 @@ img {
 
 .app {
     display: grid;
-    grid-template-columns: 200px 1fr; /*1fr hace que la segunda columna ocupe todo el espacio disponible*/
-    min-height: 100vh; /* hace que la app ocupe toda la altura de la pantalla */
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-    position: sticky; /* hace que el sidebar se quede fijo en la pantalla al hacer scroll */
+    position: sticky;
     top: 0;
     height: 100vh;
-    display: flex; /* hace que los elementos hijos se alineen en una fila */
+    display: flex;
     flex-direction: column;
     padding: 24px 16px 20px;
     background: var(--white);
@@ -100,10 +105,6 @@ img {
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 10px;
-}
-
-.nav {
-    gap: 6px;
 }
 
 .nav_link {
@@ -172,7 +173,8 @@ img {
     padding: 0 4px;
 }
 
-/* Zona principal */
+/* ZONA PRINCIPAL */
+
 .main {
     min-width: 0;
     display: flex;
@@ -182,7 +184,7 @@ img {
 .topbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* hace que el título y el botón estén en extremos opuestos */
+    justify-content: space-between;
     gap: 16px;
     height: 66px;
     padding: 0 32px;
@@ -197,7 +199,7 @@ img {
     font-size: 14px;
 }
 
-.breadcrumb [aria-current] { /* selecciona el elemento que tiene el atributo aria-current */
+.breadcrumb [aria-current] {
     color: var(--texto);
 }
 
@@ -251,7 +253,7 @@ img {
 .page_head {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between; /* hace que el título y el botón estén en extremos opuestos */
+    justify-content: space-between;
     gap: 16px;
     margin-bottom: 22px;
 }
@@ -270,10 +272,11 @@ img {
     font-size: 15px;
 }
 
-/* Zona del resumen */
+/* RESUMEN */
+
 .stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* hace que haya 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     margin-bottom: 18px;
 }
@@ -289,7 +292,19 @@ img {
 }
 
 .stat_icon {
-    /*falta añadir la imagen del icono*/
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--green-100);
+    color: var(--green-700);
+}
+
+.stat_icon_alerta {
+    background: var(--red-100);
+    color: var(--red-600);
 }
 
 .stat_label {
@@ -304,7 +319,7 @@ img {
     color: var(--texto);
 }
 
-/* Filtros */
+/* FILTROS */
 
 .filters {
     display: flex;
@@ -323,6 +338,13 @@ img {
     border-radius: var(--radius-sm);
 }
 
+.search_icon {
+    position: absolute;
+    left: 14px;
+    color: var(--muted);
+    pointer-events: none;
+}
+
 .search input {
     width: 100%;
     height: 42px;
@@ -330,6 +352,8 @@ img {
     border: 0;
     background: transparent;
     border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 14px;
 }
 
 .search input::placeholder {
@@ -344,16 +368,15 @@ img {
     outline: none;
 }
 
-.select {
-    position: relative;
-}
-
 .select select {
     height: 42px;
-    padding: 0 38px 0 16px;
+    width: 100%;
+    padding: 0 16px;
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -367,13 +390,8 @@ img {
     font-size: 13px;
 }
 
-.info_listado_orden {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
+/* LISTADO DE PRODUCTOS */
 
-/* Listado de productos */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -401,7 +419,7 @@ img {
 .tarjeta_producto_imagen img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* hace que la imagen se ajuste al contenedor sin deformarse */
+    object-fit: cover;
 }
 
 .tarjeta_producto_ref {
@@ -472,6 +490,10 @@ img {
     font-weight: 700;
 }
 
+.stock_value.is-bajo {
+    color: var(--red-600);
+}
+
 .card__actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -518,9 +540,16 @@ img {
     padding: 0 18px;
     border-radius: var(--radius-sm);
     border: 1px solid transparent;
+    font-family: inherit;
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
     transition: background .15s, border-color .15s, box-shadow .15s;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
 }
 
 .btn--sm {
@@ -545,7 +574,7 @@ img {
     color: var(--texto);
 }
 
-.btn_secundario:hover {
+.btn_secundario:hover:not(:disabled) {
     border-color: #c9d0cd;
     background: #fafbfa;
 }
@@ -557,4 +586,163 @@ img {
 
 .btn_peligro:hover {
     background: var(--red-100);
+}
+
+.btn_peligro_solido {
+    background: var(--red-600);
+    color: #fff;
+}
+
+.btn_peligro_solido:hover {
+    background: #a82020;
+}
+
+/* VENTANA DE CONFIRMACIÓN */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(18, 48, 42, .45);
+}
+
+.modal_caja {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(18, 48, 42, .2);
+}
+
+.modal_aviso {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--red-600);
+}
+
+.modal_caja h2 {
+    margin: 6px 0 10px;
+    font-size: 20px;
+    color: var(--green-900);
+}
+
+.modal_nota {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.modal_btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ---------- TABLET (hasta 1024px) ---------- */
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        flex: 1 1 100%;
+    }
+
+    .select {
+        flex: 1 1 0;
+    }
+}
+
+/* ---------- TABLET PEQUEÑA / CELULAR GRANDE (hasta 900px) ---------- */
+/* el menú lateral pasa a ser una barra arriba */
+
+@media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 12px 16px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .sidebar_top {
+        margin-bottom: 0;
+    }
+
+    .nombre_marca {
+        font-size: 28px;
+    }
+
+    .sidebar_label,
+    .tip,
+    .sidebar_bottom {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .content {
+        padding: 20px 16px 28px;
+    }
+}
+
+/* ---------- CELULAR (hasta 640px) ---------- */
+
+@media (max-width: 640px) {
+    .grid,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .page_head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page_head h1 {
+        font-size: 26px;
+    }
+
+    .page_head .btn {
+        width: 100%;
+    }
+
+    .user_info {
+        display: none;
+    }
+
+    .select {
+        flex: 1 1 calc(50% - 6px);
+    }
+
+    .info_listado,
+    .paginas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal_btns .btn {
+        flex: 1;
+    }
 }
