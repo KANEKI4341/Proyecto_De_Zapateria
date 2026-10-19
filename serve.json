@@ -1,7 +1,8 @@
 {
   "cleanUrls": false,
+  "directoryListing": false,
   "rewrites": [
-    { "source": "/frontend/crear.html", "destination": "/frontend/crear.html" },
-    { "source": "/frontend/editar.html", "destination": "/frontend/editar.html" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/frontend", "destination": "/frontend/index.html" }
   ]
 }
