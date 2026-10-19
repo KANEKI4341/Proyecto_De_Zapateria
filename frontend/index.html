@@ -10,54 +10,12 @@
 
 <body>
     <div class="app">
-        <aside class="sidebar" id="sidebar">
+        <!-- Lo llena views/componentes/sidebar.js -->
+        <aside class="sidebar" id="sidebar"></aside>
 
-            <div class="sidebar_top">
-                <a href="index.html" class="marca">
-                    <span class="nombre_marca">paso.</span>
-                    <br>
-                    <span class="tag_marca">Zapatería</span>
-                </a>
-            </div>
-
-            <p class="sidebar_label">Mi negocio</p>
-
-            <nav>
-                <ul class="nav">
-                    <li><a class="nav_link is-active" href="index.html">Productos</a></li>
-                </ul>
-            </nav>
-
-            <div class="tip">
-                <p class="tip_titulo">Cada paso, en orden.</p>
-                <p class="tip_texto">Mantén tus productos al día y tu negocio en movimiento.</p>
-            </div>
-
-            <div class="sidebar_bottom">
-                <a href="#" class="help_link">Centro de ayuda</a>
-                <p class="sidebar_foot">Paso · Tu negocio, un paso adelante.</p>
-            </div>
-        </aside>
-
-        <!-- Contenido principal -->
         <div class="main">
-            <header class="topbar">
-                <nav class="breadcrumb">
-                    <a href="#">Mi negocio</a>
-                    <span>/</span>
-                    <span aria-current="page">Productos</span>
-                </nav>
-
-                <div class="topbar_right">
-                    <div class="user">
-                        <div class="user_info">
-                            <strong>María Torres</strong>
-                            <span>Administradora · Bogotá</span>
-                        </div>
-                        <span class="avatar">MT</span>
-                    </div>
-                </div>
-            </header>
+            <!-- Lo llena views/componentes/topbar.js -->
+            <header class="topbar" id="topbar"></header>
 
             <main class="content" id="contenido">
                 <div class="page_head">
@@ -139,7 +97,7 @@
                     <p class="info_listado_orden">Ordenar por: más recientes</p>
                 </div>
 
-                <!-- Listado (lo llena js/index.js) -->
+                <!-- Listado (lo llena views/listadoView.js) -->
                 <section class="grid" id="listado"></section>
                 <p class="empty" id="vacio" hidden>No hay productos que coincidan con tu búsqueda.</p>
 
@@ -168,7 +126,12 @@
         </div>
     </div>
 
-    <script src="js/datos.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="models/producto.js"></script>
+    <script src="views/componentes/sidebar.js"></script>
+    <script src="views/componentes/topbar.js"></script>
+    <script src="views/listadoView.js"></script>
+    <script src="controllers/productoController.js"></script>
     <script src="js/index.js"></script>
 </body>
 

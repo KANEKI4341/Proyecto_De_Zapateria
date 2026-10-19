@@ -11,53 +11,12 @@
 
 <body>
     <div class="app">
-        <aside class="sidebar" id="sidebar">
-
-            <div class="sidebar_top">
-                <a href="index.html" class="marca">
-                    <span class="nombre_marca">paso.</span>
-                    <br>
-                    <span class="tag_marca">Zapatería</span>
-                </a>
-            </div>
-
-            <p class="sidebar_label">Mi negocio</p>
-
-            <nav>
-                <ul class="nav">
-                    <li><a class="nav_link is-active" href="index.html">Productos</a></li>
-                </ul>
-            </nav>
-
-            <div class="tip">
-                <p class="tip_titulo">Cada paso, en orden.</p>
-                <p class="tip_texto">Mantén tus productos al día y tu negocio en movimiento.</p>
-            </div>
-
-            <div class="sidebar_bottom">
-                <a href="#" class="help_link">Centro de ayuda</a>
-                <p class="sidebar_foot">Paso · Tu negocio, un paso adelante.</p>
-            </div>
-        </aside>
+        <!-- Lo llena views/componentes/sidebar.js -->
+        <aside class="sidebar" id="sidebar"></aside>
 
         <div class="main">
-            <header class="topbar">
-                <nav class="breadcrumb">
-                    <a href="index.html">Mi negocio</a>
-                    <span>/</span>
-                    <span aria-current="page">Editar producto</span>
-                </nav>
-
-                <div class="topbar_right">
-                    <div class="user">
-                        <div class="user_info">
-                            <strong>María Torres</strong>
-                            <span>Administradora · Bogotá</span>
-                        </div>
-                        <span class="avatar">MT</span>
-                    </div>
-                </div>
-            </header>
+            <!-- Lo llena views/componentes/topbar.js -->
+            <header class="topbar" id="topbar"></header>
 
             <main class="content" id="contenido">
 
@@ -172,10 +131,6 @@
                             </span>
                         </div>
 
-                        <div class="progress" id="progress" hidden>
-                            <div class="progress_bar" id="progress_bar"></div>
-                        </div>
-
                         <label class="dropzone" id="dropzone" for="foto">
                             <strong>Subir fotografía</strong>
                             <span>Seleccionar archivos del dispositivo</span>
@@ -188,7 +143,7 @@
                         </p>
 
                         <p class="notice" id="foto_ok" hidden>
-                            <span>Fotografía seleccionada. Usa un fondo neutro y muestra el calzado completo.</span>
+                            <span id="foto_ok_texto">Fotografía seleccionada.</span>
                         </p>
                     </aside>
 
@@ -205,7 +160,12 @@
         </div>
     </div>
 
-    <script src="js/datos.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="models/producto.js"></script>
+    <script src="views/componentes/sidebar.js"></script>
+    <script src="views/componentes/topbar.js"></script>
+    <script src="views/formularioView.js"></script>
+    <script src="controllers/productoController.js"></script>
     <script src="js/formulario.js"></script>
 </body>
 
