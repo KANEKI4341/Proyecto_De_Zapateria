@@ -1,0 +1,7 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/frontend/crear.html", "destination": "/frontend/Crear.html" },
+    { "source": "/frontend/editar.html", "destination": "/frontend/editar.html" }
+  ]
+}
