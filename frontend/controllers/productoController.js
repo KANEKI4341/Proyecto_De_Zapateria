@@ -203,9 +203,13 @@ const ProductoController = {
 
             const mb = (archivo.size / 1048576).toFixed(1).replace(".", ",") + " MB";
 
-            fotoActual = RUTA_IMAGENES + archivo.name;
-            FormularioView.mostrarFoto(URL.createObjectURL(archivo), archivo.name + " · " + mb, "✓ Vista previa · seleccionada");
-            FormularioView.mostrarFotoOk("Copia la imagen a la carpeta assets/img/ con el nombre " + archivo.name + " para que se vea en el listado.");
+            const lector = new FileReader();
+            lector.onload = function () {
+                fotoActual = lector.result;
+                FormularioView.mostrarFoto(fotoActual, archivo.name + " · " + mb, "✓ Vista previa · seleccionada");
+                FormularioView.mostrarFotoOk("Imagen lista para guardar.");
+            };
+            lector.readAsDataURL(archivo);
         }
 
         // ---------- Eventos de los campos ----------

@@ -57,10 +57,6 @@ const Producto = {
         }
 
         const lista = JSON.parse(antiguo).map(function (p) {
-            // las imágenes en Base64 ya no se guardan
-            if (p.foto && p.foto.startsWith("data:")) {
-                p.foto = "";
-            }
             return p;
         });
 
